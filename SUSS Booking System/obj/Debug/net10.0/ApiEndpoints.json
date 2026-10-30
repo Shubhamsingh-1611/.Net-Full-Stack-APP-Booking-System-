@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "SUSS_Booking_System.Controllers.FormD1Controller",
+    "Method": "Submit",
+    "RelativePath": "api/FormD1/submit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SUSS_Booking_System.DTOs.FormD1Submit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
