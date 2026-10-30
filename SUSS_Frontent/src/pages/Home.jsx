@@ -3,8 +3,10 @@ import { useMsal } from "@azure/msal-react";
 import FormD1 from "../pages/FormD1.jsx";
 import { submitD1 } from "../services/api.js";
 import { findStudentByEmail } from "../data/students.js";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const navigate = useNavigate();
   const { accounts, instance } = useMsal();
   const account = instance.getActiveAccount() ?? accounts[0];
   const claims = account?.idTokenClaims ?? {};
@@ -19,7 +21,6 @@ export default function Home() {
   const [studentError, setStudentError] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
-  const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
     function loadStudent() {
@@ -48,8 +49,12 @@ export default function Home() {
 
     try {
       await submitD1(payload);
-      setSubmitted(true);
+      navigate("/profile", {
+        replace: true,
+        state: { student, submission: payload, submissionSucceeded: true },
+      });
     } catch (error) {
+      console.log(error.message);
       setSubmitError(
         error instanceof Error
           ? error.message
@@ -59,19 +64,6 @@ export default function Home() {
       setSubmitting(false);
     }
   };
-
-  if (submitted) {
-    return (
-      <main className="mx-auto max-w-3xl p-6">
-        <h1 className="mb-3 text-2xl font-semibold text-neutral-800">
-          Form D1 submitted
-        </h1>
-        <p role="status" className="text-neutral-700">
-          Your D1 form has been submitted successfully.
-        </p>
-      </main>
-    );
-  }
 
   if (loadingStudent) {
     return (
