@@ -6,6 +6,7 @@ import { RoleGuard } from "./auth/RoleGuard.jsx"; // Adjust this path to match y
 import Login from "./pages/Login.jsx";
 import Home from "./pages/Home.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
+import Profile from "./pages/Profile.jsx";
 import { useEffect } from "react";
 import { apiScope } from "./auth/msalConfig.js";
 
@@ -69,6 +70,15 @@ const { instance, accounts } = useMsal();
           element={
             <RoleGuard allowedRoles={["Staff", "Admin"]}>
               <Dashboard />
+            </RoleGuard>
+          }
+        />
+
+        <Route
+          path="/profile"
+          element={
+            <RoleGuard allowedRoles={["Client", "Staff", "Admin"]}>
+              <Profile />
             </RoleGuard>
           }
         />

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SUSS Booking System")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9d0ed0f7b2d74499bdf37a26b9a6928cb2839ec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+672736530ff7ed4d230acfe4122b9a708b502c9b")]
 [assembly: System.Reflection.AssemblyProductAttribute("SUSS Booking System")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SUSS Booking System")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
