@@ -1,9 +1,10 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Web;
+using SUSS_Booking_System.Data;
 using SUSS_Booking_System.Repositories;
 using SUSS_Booking_System.services;
-using SUSS_Booking_System.Data;
+using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,10 +17,12 @@ builder.Services
     .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
 
 // Map the token "roles" claim array directly to .NET User.IsInRole() matching
-builder.Services.Configure<JwtBearerOptions>(JwtBearerDefaults.AuthenticationScheme, options =>
-{
-    options.TokenValidationParameters.RoleClaimType = "roles";
-});
+builder.Services.Configure<JwtBearerOptions>(
+    JwtBearerDefaults.AuthenticationScheme, options =>
+    {
+        options.TokenValidationParameters.RoleClaimType =
+            ClaimTypes.Role;
+    });
 
 builder.Services.AddAuthorization();
 

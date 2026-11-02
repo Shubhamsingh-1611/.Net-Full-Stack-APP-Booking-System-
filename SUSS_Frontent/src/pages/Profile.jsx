@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useMsal } from "@azure/msal-react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { findStudentByEmail } from "../data/students.js";
 import { DEFAULT_INDUSTRIES, JOB_STATUSES } from "../utils/D1Constant.js";
 import { calculateAge, validateD1 } from "../utils/D1Validations.js";
 import { SelectField, TextField } from "../utils/D1Fields.jsx";
+import StudentPortalLayout from "../components/StudentPortalLayout.jsx";
 
 const PROFILE_FIELDS = [
   ["Full Name", "fullName"],
@@ -58,6 +59,7 @@ export default function Profile() {
   const claims = account?.idTokenClaims ?? {};
   const email =
     claims.email ?? claims.preferred_username ?? account?.username ?? "";
+  const submission = location.state?.submission ?? {};
   const studentRecord = location.state?.student ?? findStudentByEmail(email);
   const student = studentRecord
     ? {
@@ -66,7 +68,6 @@ export default function Profile() {
         email: studentRecord.email ?? email,
       }
     : null;
-  const submission = location.state?.submission ?? {};
   const initialContact = {
     preferredMobile: submission.preferredMobile ?? "",
     confirmMobile: submission.preferredMobile ?? "",
@@ -117,78 +118,25 @@ export default function Profile() {
 
   if (!student) {
     return (
-      <main className="mx-auto max-w-3xl p-6">
+      <StudentPortalLayout>
         <p role="alert" className="text-red-800">
           No profile is configured for this account.
         </p>
-      </main>
+      </StudentPortalLayout>
     );
   }
 
   return (
-    <div className="min-h-screen bg-white font-[Poppins,'Segoe_UI',system-ui,sans-serif] text-[#111827]">
-      <header className="flex min-h-[100px] items-center justify-between gap-6 bg-[#fafafa] px-3 py-4">
-        <div className="flex items-center gap-3 text-[#123b69]">
-          <span className="text-[30px] font-bold leading-none tracking-tight">
-            <span className="text-[#e31937]">S</span>USS
-          </span>
-          <span className="h-10 w-px bg-[#123b69]" />
-          <span className="max-w-40 text-[12px] font-bold uppercase leading-[1.15]">
-            C-Three
-            <br />
-            Counselling &amp;
-            <br />
-            Life Coaching
-          </span>
-        </div>
-        <div className="flex items-start gap-2 text-right text-[#526174]">
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            className="mt-0.5 h-4 w-4 fill-current"
-          >
-            <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5Z" />
-          </svg>
-          <div className="max-w-[260px] text-sm">
-            <div className="break-all">{email}</div>
-            <div>Student</div>
-          </div>
-        </div>
-      </header>
-
-      <div className="flex min-h-[calc(100vh-100px)] flex-col md:flex-row">
-        <aside className="w-full shrink-0 bg-[#fafafa] md:w-[280px]">
-          <nav
-            aria-label="Student portal"
-            className="flex gap-1 overflow-x-auto px-3 py-3 md:flex-col md:gap-0 md:px-0 md:py-2"
-          >
-            <Link
-              to="/profile"
-              aria-current="page"
-              className="shrink-0 px-3 py-3 text-sm text-red-600 md:px-5"
+    <StudentPortalLayout>
+      <div className="w-full max-w-[988px]">
+          {location.state?.d1AlreadyExists && (
+            <p
+              role="status"
+              className="mb-5 border-l-4 border-green-700 bg-green-50 p-3 text-sm text-green-800"
             >
-              Profile
-            </Link>
-            {[
-              "Services",
-              "Manage Bookings",
-              "FAQ",
-              "Instructions on how to book",
-              "Sign Out",
-              "About",
-            ].map((item) => (
-              <span
-                key={item}
-                className="shrink-0 px-3 py-3 text-sm text-[#111827] md:px-5"
-              >
-                {item}
-              </span>
-            ))}
-          </nav>
-        </aside>
-
-        <main className="min-w-0 flex-1 px-4 pb-10 pt-5 md:px-0">
-          <div className="w-full max-w-[988px]">
+              Your D1 form has already been submitted.
+            </p>
+          )}
           {location.state?.submissionSucceeded && (
             <p
               role="status"
@@ -311,9 +259,7 @@ export default function Profile() {
               </p>
             </form>
           </section>
-          </div>
-        </main>
       </div>
-    </div>
+    </StudentPortalLayout>
   );
 }

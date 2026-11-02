@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shubham.singh\\Custom Project\\.Net-Full-Stack-APP-Booking-System-\\SUSS Booking System\\SUSS Booking System.csproj": {}
+    "D:\\Espire\\SUSS Booking System\\SUSS Booking System\\SUSS Booking System.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shubham.singh\\Custom Project\\.Net-Full-Stack-APP-Booking-System-\\SUSS Booking System\\SUSS Booking System.csproj": {
+    "D:\\Espire\\SUSS Booking System\\SUSS Booking System\\SUSS Booking System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shubham.singh\\Custom Project\\.Net-Full-Stack-APP-Booking-System-\\SUSS Booking System\\SUSS Booking System.csproj",
+        "projectUniqueName": "D:\\Espire\\SUSS Booking System\\SUSS Booking System\\SUSS Booking System.csproj",
         "projectName": "SUSS Booking System",
-        "projectPath": "C:\\Users\\shubham.singh\\Custom Project\\.Net-Full-Stack-APP-Booking-System-\\SUSS Booking System\\SUSS Booking System.csproj",
-        "packagesPath": "C:\\Users\\shubham.singh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shubham.singh\\Custom Project\\.Net-Full-Stack-APP-Booking-System-\\SUSS Booking System\\obj\\",
+        "projectPath": "D:\\Espire\\SUSS Booking System\\SUSS Booking System\\SUSS Booking System.csproj",
+        "packagesPath": "C:\\Users\\XVIXIMMIV\\.nuget\\packages\\",
+        "outputPath": "D:\\Espire\\SUSS Booking System\\SUSS Booking System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\shubham.singh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\XVIXIMMIV\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

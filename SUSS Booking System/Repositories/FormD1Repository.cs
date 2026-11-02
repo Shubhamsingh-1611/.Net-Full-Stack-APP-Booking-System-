@@ -18,6 +18,11 @@ namespace SUSS_Booking_System.Repositories
             return _context.FormD1.AnyAsync(f => f.PINumber == piNumber);
         }
 
+        //public Task<bool> ExistsByEmailAsync(string piNumber)
+        //{
+        //    return _context.FormD1.AnyAsync(f => f.email == email);
+        //}
+
         public Task<FormD1?> GetByPiNumberAsync(string piNumber)
         {
             return _context.FormD1
@@ -30,8 +35,13 @@ namespace SUSS_Booking_System.Repositories
             await _context.FormD1.AddAsync(entity);
         }
 
-        public Task SaveChangesAsync()
+        public async Task<bool> D1Exists(String objectId)
         {
+            return await _context.FormD1.AnyAsync(f => f.EntraObjectId == objectId);
+        }
+
+        public Task SaveChangesAsync()
+        {   
             return _context.SaveChangesAsync();
         }
     }

@@ -1,6 +1,26 @@
 [
   {
     "ContainingType": "SUSS_Booking_System.Controllers.FormD1Controller",
+    "Method": "CheckRole",
+    "RelativePath": "api/FormD1/check-role",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SUSS_Booking_System.Controllers.FormD1Controller",
+    "Method": "D1Exists",
+    "RelativePath": "api/FormD1/d1exist",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SUSS_Booking_System.Controllers.FormD1Controller",
     "Method": "Submit",
     "RelativePath": "api/FormD1/submit",
     "HttpMethod": "POST",

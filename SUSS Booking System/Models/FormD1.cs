@@ -18,6 +18,9 @@ namespace SUSS_Booking_System.Models
         [Required, StringLength(20)]
         public string PINumber { get; set; } = string.Empty;
 
+        [StringLength(36)]
+        public string? EntraObjectId { get; set; }
+
         // Entered by the student
         [Required, Phone, StringLength(20)]
         public string PreferredMobile { get; set; } = string.Empty;

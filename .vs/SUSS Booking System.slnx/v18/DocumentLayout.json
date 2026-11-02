@@ -1,12 +1,126 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\shubham.singh\\Custom Project\\.Net-Full-Stack-APP-Booking-System-\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\Espire\\SUSS Booking System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{31D73CA6-5D99-2988-4357-9190975D3BBA}|SUSS Booking System\\SUSS Booking System.csproj|d:\\espire\\suss booking system\\suss booking system\\controllers\\formd1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31D73CA6-5D99-2988-4357-9190975D3BBA}|SUSS Booking System\\SUSS Booking System.csproj|solutionrelative:suss booking system\\controllers\\formd1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31D73CA6-5D99-2988-4357-9190975D3BBA}|SUSS Booking System\\SUSS Booking System.csproj|d:\\espire\\suss booking system\\suss booking system\\repositories\\formd1repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31D73CA6-5D99-2988-4357-9190975D3BBA}|SUSS Booking System\\SUSS Booking System.csproj|solutionrelative:suss booking system\\repositories\\formd1repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31D73CA6-5D99-2988-4357-9190975D3BBA}|SUSS Booking System\\SUSS Booking System.csproj|d:\\espire\\suss booking system\\suss booking system\\repositories\\iformd1repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31D73CA6-5D99-2988-4357-9190975D3BBA}|SUSS Booking System\\SUSS Booking System.csproj|solutionrelative:suss booking system\\repositories\\iformd1repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31D73CA6-5D99-2988-4357-9190975D3BBA}|SUSS Booking System\\SUSS Booking System.csproj|d:\\espire\\suss booking system\\suss booking system\\services\\formd1service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31D73CA6-5D99-2988-4357-9190975D3BBA}|SUSS Booking System\\SUSS Booking System.csproj|solutionrelative:suss booking system\\services\\formd1service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31D73CA6-5D99-2988-4357-9190975D3BBA}|SUSS Booking System\\SUSS Booking System.csproj|d:\\espire\\suss booking system\\suss booking system\\services\\iformd1service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31D73CA6-5D99-2988-4357-9190975D3BBA}|SUSS Booking System\\SUSS Booking System.csproj|solutionrelative:suss booking system\\services\\iformd1service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31D73CA6-5D99-2988-4357-9190975D3BBA}|SUSS Booking System\\SUSS Booking System.csproj|d:\\espire\\suss booking system\\suss booking system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31D73CA6-5D99-2988-4357-9190975D3BBA}|SUSS Booking System\\SUSS Booking System.csproj|solutionrelative:suss booking system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormD1Repository.cs",
+              "DocumentMoniker": "D:\\Espire\\SUSS Booking System\\SUSS Booking System\\Repositories\\FormD1Repository.cs",
+              "RelativeDocumentMoniker": "SUSS Booking System\\Repositories\\FormD1Repository.cs",
+              "ToolTip": "D:\\Espire\\SUSS Booking System\\SUSS Booking System\\Repositories\\FormD1Repository.cs",
+              "RelativeToolTip": "SUSS Booking System\\Repositories\\FormD1Repository.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA1wCsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T15:02:03.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IFormD1Repository.cs",
+              "DocumentMoniker": "D:\\Espire\\SUSS Booking System\\SUSS Booking System\\Repositories\\IFormD1Repository.cs",
+              "RelativeDocumentMoniker": "SUSS Booking System\\Repositories\\IFormD1Repository.cs",
+              "ToolTip": "D:\\Espire\\SUSS Booking System\\SUSS Booking System\\Repositories\\IFormD1Repository.cs",
+              "RelativeToolTip": "SUSS Booking System\\Repositories\\IFormD1Repository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T15:01:38.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormD1Service.cs",
+              "DocumentMoniker": "D:\\Espire\\SUSS Booking System\\SUSS Booking System\\services\\FormD1Service.cs",
+              "RelativeDocumentMoniker": "SUSS Booking System\\services\\FormD1Service.cs",
+              "ToolTip": "D:\\Espire\\SUSS Booking System\\SUSS Booking System\\services\\FormD1Service.cs",
+              "RelativeToolTip": "SUSS Booking System\\services\\FormD1Service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T14:59:24.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IFormD1Service.cs",
+              "DocumentMoniker": "D:\\Espire\\SUSS Booking System\\SUSS Booking System\\services\\IFormD1Service.cs",
+              "RelativeDocumentMoniker": "SUSS Booking System\\services\\IFormD1Service.cs",
+              "ToolTip": "D:\\Espire\\SUSS Booking System\\SUSS Booking System\\services\\IFormD1Service.cs",
+              "RelativeToolTip": "SUSS Booking System\\services\\IFormD1Service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T14:58:28.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Espire\\SUSS Booking System\\SUSS Booking System\\Program.cs",
+              "RelativeDocumentMoniker": "SUSS Booking System\\Program.cs",
+              "ToolTip": "D:\\Espire\\SUSS Booking System\\SUSS Booking System\\Program.cs",
+              "RelativeToolTip": "SUSS Booking System\\Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T05:29:32.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormD1Controller.cs",
+              "DocumentMoniker": "D:\\Espire\\SUSS Booking System\\SUSS Booking System\\Controllers\\FormD1Controller.cs",
+              "RelativeDocumentMoniker": "SUSS Booking System\\Controllers\\FormD1Controller.cs",
+              "ToolTip": "D:\\Espire\\SUSS Booking System\\SUSS Booking System\\Controllers\\FormD1Controller.cs",
+              "RelativeToolTip": "SUSS Booking System\\Controllers\\FormD1Controller.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC0AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T05:20:01.464Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

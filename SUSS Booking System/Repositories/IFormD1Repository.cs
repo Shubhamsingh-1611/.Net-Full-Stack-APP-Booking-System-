@@ -8,6 +8,8 @@ namespace SUSS_Booking_System.Repositories
     {
         Task<bool> ExistsByPiNumberAsync(string piNumber);
         Task<FormD1?> GetByPiNumberAsync(string piNumber);
+
+        Task<bool> D1Exists(String objectId);
         Task AddAsync(FormD1 entity);
         Task SaveChangesAsync();
 

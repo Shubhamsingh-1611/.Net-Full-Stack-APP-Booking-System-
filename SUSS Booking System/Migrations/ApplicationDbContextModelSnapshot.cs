@@ -43,6 +43,10 @@ namespace SUSS_Booking_System.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
+                    b.Property<string>("EntraObjectId")
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
+
                     b.Property<string>("IndustryWorkingAt")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");

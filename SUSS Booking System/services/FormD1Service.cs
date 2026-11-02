@@ -12,8 +12,15 @@ namespace SUSS_Booking_System.services
         {
             _formD1Repository = formD1Repository;
         }
-        public async Task SubmitAsync(FormD1Submit dto)
+
+        public Task<bool> D1Exists(String objId)
         {
+            return _formD1Repository.D1Exists(objId);
+        }
+
+        public async Task SubmitAsync(FormD1Submit dto, String objId)
+        {
+
 
             if (await _formD1Repository.ExistsByPiNumberAsync(dto.PINumber))
                 throw new InvalidOperationException("Form D1 has already been submitted.");
@@ -21,6 +28,7 @@ namespace SUSS_Booking_System.services
             var entity = new FormD1
             {
                 PINumber = dto.PINumber,
+                EntraObjectId = objId,
                 PreferredMobile = dto.PreferredMobile,
                 PreferredEmail = dto.PreferredEmail,
                 JobStatus = dto.JobStatus,

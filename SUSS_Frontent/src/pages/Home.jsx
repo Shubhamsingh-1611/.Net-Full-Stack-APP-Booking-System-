@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useMsal } from "@azure/msal-react";
 import FormD1 from "../pages/FormD1.jsx";
-import { submitD1 } from "../services/api.js";
+import { checkD1Exists, submitD1 } from "../services/api.js";
 import { findStudentByEmail } from "../data/students.js";
 import { useNavigate } from "react-router-dom";
+import StudentPortalLayout from "../components/StudentPortalLayout.jsx";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ export default function Home() {
     claims.preferred_username ??
     account?.username ??
     "";
+  const isClient = Array.isArray(claims.roles) && claims.roles.includes("Client");
 
   const [student, setStudent] = useState(null);
   const [loadingStudent, setLoadingStudent] = useState(true);
@@ -23,25 +25,56 @@ export default function Home() {
   const [submitError, setSubmitError] = useState("");
 
   useEffect(() => {
-    function loadStudent() {
+    let isCurrent = true;
+
+    async function loadStudent() {
       setLoadingStudent(true);
       setStudentError("");
 
       const demoStudent = findStudentByEmail(email);
       if (!demoStudent) {
-        setStudentError(
-          `No demo student is configured for ${email || "this account"}. Add the login email to src/data/students.js.`
-        );
-        setLoadingStudent(false);
+        if (isCurrent) {
+          setStudentError(
+            `No demo student is configured for ${email || "this account"}. Add the login email to src/data/students.js.`
+          );
+          setLoadingStudent(false);
+        }
         return;
       }
 
       setStudent(demoStudent);
-      setLoadingStudent(false);
+      if (isClient) {
+        try {
+          const alreadySubmitted = await checkD1Exists();
+          if (!isCurrent) return;
+          if (alreadySubmitted) {
+            navigate("/profile", {
+              replace: true,
+              state: { student: demoStudent, d1AlreadyExists: true },
+            });
+            return;
+          }
+        } catch (error) {
+          if (isCurrent) {
+            setStudentError(
+              error instanceof Error
+                ? error.message
+                : "Unable to check whether Form D1 has been submitted. Please try again."
+            );
+            setLoadingStudent(false);
+          }
+          return;
+        }
+      }
+
+      if (isCurrent) setLoadingStudent(false);
     }
 
     loadStudent();
-  }, [email]);
+    return () => {
+      isCurrent = false;
+    };
+  }, [email, isClient, navigate]);
 
   const handleSubmit = async (payload) => {
     setSubmitting(true);
@@ -67,24 +100,26 @@ export default function Home() {
 
   if (loadingStudent) {
     return (
-      <p role="status" className="p-6 text-neutral-700">
-        Loading student details...
-      </p>
+      <StudentPortalLayout>
+        <p role="status" className="text-neutral-700">
+          Loading student details...
+        </p>
+      </StudentPortalLayout>
     );
   }
 
   if (studentError) {
     return (
-      <main className="mx-auto max-w-3xl p-6">
+      <StudentPortalLayout>
         <p role="alert" className="border-l-[3px] border-red-700 bg-red-50 px-3 py-2.5 text-[13px] text-red-800">
           {studentError}
         </p>
-      </main>
+      </StudentPortalLayout>
     );
   }
 
   return (
-    <main>
+    <StudentPortalLayout>
       {submitError && (
         <p
           role="alert"
@@ -99,6 +134,6 @@ export default function Home() {
         onCancel={() => setSubmitError("")}
         submitting={submitting}
       />
-    </main>
+    </StudentPortalLayout>
   );
 }

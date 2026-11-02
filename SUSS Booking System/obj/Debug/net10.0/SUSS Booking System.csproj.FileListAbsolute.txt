@@ -179,7 +179,6 @@ D:\Espire\SUSS Booking System\SUSS Booking System\obj\Debug\net10.0\refint\SUSS 
 D:\Espire\SUSS Booking System\SUSS Booking System\obj\Debug\net10.0\SUSS Booking System.pdb
 D:\Espire\SUSS Booking System\SUSS Booking System\obj\Debug\net10.0\SUSS Booking System.genruntimeconfig.cache
 D:\Espire\SUSS Booking System\SUSS Booking System\obj\Debug\net10.0\ref\SUSS Booking System.dll
-D:\Espire\SUSS Booking System\SUSS Booking System\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 D:\Espire\SUSS Booking System\SUSS Booking System\bin\Debug\net10.0\System.Security.Cryptography.Pkcs.dll
 D:\Espire\SUSS Booking System\SUSS Booking System\bin\Debug\net10.0\runtimes\win\lib\net10.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\shubham.singh\Custom Project\.Net-Full-Stack-APP-Booking-System-\SUSS Booking System\bin\Debug\net10.0\appsettings.Development.json
@@ -367,3 +366,5 @@ C:\Users\shubham.singh\Custom Project\.Net-Full-Stack-APP-Booking-System-\SUSS B
 C:\Users\shubham.singh\Custom Project\.Net-Full-Stack-APP-Booking-System-\SUSS Booking System\obj\Debug\net10.0\SUSS Booking System.pdb
 C:\Users\shubham.singh\Custom Project\.Net-Full-Stack-APP-Booking-System-\SUSS Booking System\obj\Debug\net10.0\SUSS Booking System.genruntimeconfig.cache
 C:\Users\shubham.singh\Custom Project\.Net-Full-Stack-APP-Booking-System-\SUSS Booking System\obj\Debug\net10.0\ref\SUSS Booking System.dll
+D:\Espire\SUSS Booking System\SUSS Booking System\obj\Debug\net10.0\SUSS Booking System.sourcelink.json
+D:\Espire\SUSS Booking System\SUSS Booking System\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
